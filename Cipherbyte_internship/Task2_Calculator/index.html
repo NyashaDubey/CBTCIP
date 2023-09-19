@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .heading {
+            font-size: 2rem;
+            color: black;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1; 
+        }
+
+        .calculator {
+            width: 320px;
+            background-color: rgba(0, 0, 0, 0.8); 
+            border-radius: 8px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .calculator-heading {
+            font-size: 1.5rem;
+            color: #fff;
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .output {
+            font-size: 2rem;
+            color: #fff;
+            text-align: right;
+            padding: 20px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .button {
+            font-size: 1.5rem;
+            padding: 15px;
+            text-align: center;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .button.operator {
+            background-color: #ff9500;
+        }
+
+        .button.operator:hover {
+            background-color: #ffad33;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="calculator">
+        <div class="calculator-heading">Calculator</div>
+        <div class="output" id="output">0</div>
+        <div class="buttons">
+            <div class="button" onclick="clearOutput()">C</div>
+            
+            <div class="button" onclick="appendToOutput('7')">7</div>
+            <div class="button" onclick="appendToOutput('8')">8</div>
+            <div class="button" onclick="appendToOutput('9')">9</div>
+            <div class="button" onclick="appendToOutput('4')">4</div>
+            <div class="button" onclick="appendToOutput('5')">5</div>
+            <div class="button" onclick="appendToOutput('6')">6</div>
+            <div class="button" onclick="appendToOutput('1')">1</div>
+            <div class="button" onclick="appendToOutput('2')">2</div>
+            <div class="button" onclick="appendToOutput('3')">3</div>
+            <div class="button" onclick="appendToOutput('0')">0</div>
+            <div class="button" onclick="appendToOutput('.')">.</div>
+            <div class="button operator" onclick="calculate('=')">=</div>
+            <div class="button operator" onclick="appendToOutput('+')">+</div>
+            <div class="button operator" onclick="appendToOutput('-')">-</div>
+            <div class="button operator" onclick="appendToOutput('*')">*</div>
+            <div class="button operator" onclick="appendToOutput('/')">/</div>
+            <div class="button operator" onclick="appendToOutput('%')">%</div>
+            <div class="button operator" onclick="appendToOutput('()')">()</div>
+            <div class="button" onclick="deleteLastInput()">x</div>
+        </div>
+    </div>
+    
+    <script>
+        let currentOutput = '0';
+
+        function updateOutput() {
+            document.getElementById('output').innerText = currentOutput;
+        }
+
+        function appendToOutput(value) {
+            if (currentOutput === '0' && value !== '.') {
+                currentOutput = value;
+            } else {
+                currentOutput += value;
+            }
+            updateOutput();
+        }
+
+        function deleteLastInput() {
+            currentOutput = currentOutput.slice(0, -1); 
+            updateOutput();
+        }
+
+        function clearOutput() {
+            currentOutput = '0';
+            updateOutput();
+        }
+
+        function calculate() {
+            try {
+                currentOutput = eval(currentOutput).toString();
+                updateOutput();
+            } catch (error) {
+                currentOutput = 'Error';
+                updateOutput();
+            }
+        }
+    </script>
+</body>
+</html>

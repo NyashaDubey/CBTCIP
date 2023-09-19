@@ -1,0 +1,312 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c;
+    
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-link {
+    font-size: 18px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #e74c3c;
+    
+}
+
+
+.hero {
+    background-image: url('https://img.freepik.com/premium-photo/background-cooking-black-wooden-background-top-view-free-space-your-text_187166-5650.jpg');
+    
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 280px 0;
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.hero .btn-primary {
+    font-size: 18px;
+    background-color: #e74c3c;
+    
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+    background-color: #c0392b;
+    
+}
+
+
+.featured-menu {
+    background-color: #fff;
+   
+    padding: 80px 0;
+    
+}
+
+.featured-menu h2 {
+    font-size: 36px;
+    
+    font-weight: bold;
+    
+    margin-bottom: 40px;
+    
+    color: #333;
+    
+}
+
+
+.menu-item {
+    border: 1px solid #e0e0e0;
+    
+    padding: 20px;
+   
+    margin-bottom: 20px;
+    
+    text-align: center;
+    
+}
+
+.menu-item img {
+    max-width: 100%;
+    
+    height: auto;
+    
+    border-radius: 8px;
+    
+}
+
+.menu-item h3 {
+    font-size: 24px;
+   
+    margin-top: 10px;
+    
+}
+
+.menu-item p {
+    font-size: 16px;
+    
+    margin-top: 10px;
+    
+    color: #666;
+    
+}
+
+.menu-item .price {
+    font-size: 20px;
+    
+    color: #e74c3c;
+    
+    font-weight: bold;
+    
+    margin-top: 10px;
+    
+}
+
+.menu-item .btn {
+    background-color: #e74c3c;
+    
+    color: #fff;
+    
+    padding: 10px 20px;
+    
+    font-size: 18px;
+    
+    border: none;
+    
+    border-radius: 10px;
+    
+    margin-top: 20px;
+    
+    cursor: pointer;
+   
+    transition: background-color 0.3s ease;
+    
+}
+
+.menu-item .btn:hover {
+    background-color: #c0392b;
+    
+}
+
+.prev-btn {
+    background-color: #e74c3c;
+    
+    color: #fff;
+   
+    padding: 10px 20px;
+    
+    font-size: 18px;
+    
+    border: none;
+    
+    border-radius: 10px;
+   
+    margin-top: 20px;
+    
+    cursor: pointer;
+   
+    
+}
+
+.prev-btn:hover {
+    background-color: gray;
+    transition: 0.3s;
+}
+
+.next-btn {
+    background-color: #e74c3c;
+    
+    color: #fff;
+    
+    padding: 10px 20px;
+    
+    font-size: 18px;
+   
+    border: none;
+    
+    border-radius: 10px;
+    
+    margin-top: 20px;
+
+    cursor: pointer;
+    
+   
+}
+
+.next-btn:hover {
+    background-color: gray;
+    transition: 0.3s;
+}
+
+
+
+
+.about-us {
+    background-color: #f7f7f7;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.about-us h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 18px;
+    color: #555;
+}
+
+
+.contact {
+    text-align: center;
+    
+    padding: 80px 0;
+    
+}
+
+.contact h2 {
+    font-size: 36px;
+    
+    font-weight: bold;
+    
+    margin-bottom: 20px;
+    
+    color: #333;
+    
+}
+
+.contact p {
+    font-size: 18px;
+    
+    color: #666;
+    
+    margin-bottom: 40px;
+    
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+    
+}
+
+.form-control {
+    width: 100%;
+    
+    padding: 10px;
+    
+    font-size: 16px;
+    
+    border: 1px solid #e0e0e0;
+    
+    border-radius: 5px;
+    
+}
+
+.btn-primary {
+    background-color: #e74c3c;
+    
+    color: #fff;
+    
+    padding: 10px 20px;
+    
+    font-size: 18px;
+    
+    border: none;
+    
+    border-radius: 5px;
+    
+    cursor: pointer;
+    
+    transition: background-color 0.3s ease;
+    
+}
+
+.btn-primary:hover {
+    background-color: #c0392b;
+    
+}
